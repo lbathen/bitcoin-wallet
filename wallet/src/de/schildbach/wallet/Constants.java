@@ -21,7 +21,8 @@ import java.io.File;
 
 import org.bitcoinj.core.NetworkParameters;
 import org.bitcoinj.params.MainNetParams;
-import org.bitcoinj.params.TestNet3Params;
+import org.bitcoinj.params.TestNet3Params; //TODO: Add a more elegant way to switch between testnet, regtest, and mainnet
+import org.bitcoinj.params.RegTestParams;
 import org.bitcoinj.utils.MonetaryFormat;
 
 import android.os.Build;
@@ -38,10 +39,11 @@ public final class Constants
 
 	/** Network this wallet is on (e.g. testnet or mainnet). */
 	public static final NetworkParameters NETWORK_PARAMETERS = TEST ? TestNet3Params.get() : MainNetParams.get();
+    //public static final NetworkParameters NETWORK_PARAMETERS = TEST ? RegTestParams.get() : MainNetParams.get();
 
-	public final static class Files
+    public final static class Files
 	{
-		private static final String FILENAME_NETWORK_SUFFIX = NETWORK_PARAMETERS.getId().equals(NetworkParameters.ID_MAINNET) ? "" : "-testnet";
+        private static final String FILENAME_NETWORK_SUFFIX = NETWORK_PARAMETERS.getId().equals(NetworkParameters.ID_MAINNET) ? "" : "-testnet";
 
 		/** Filename of the wallet. */
 		public static final String WALLET_FILENAME_PROTOBUF = "wallet-protobuf" + FILENAME_NETWORK_SUFFIX;

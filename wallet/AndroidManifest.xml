@@ -118,6 +118,14 @@
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
 		</activity>
+        <activity
+            android:name="de.schildbach.wallet.ui.send.PaymentRequestActivity"
+            android:label="@string/payment_request_activity_title"
+            android:configChanges="keyboard|keyboardHidden"
+            android:screenOrientation="behind"
+            android:theme="@style/My.Theme.ChildActivity"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
 		<activity
 			android:name="de.schildbach.wallet.ui.SendCoinsQrActivity"
 			android:configChanges="keyboard|keyboardHidden"

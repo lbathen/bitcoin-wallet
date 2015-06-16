@@ -139,9 +139,16 @@ public abstract class ThrottlingWalletChangeListener implements WalletEventListe
 		// swallow
 	}
 
-	@Override
+	//@Override
 	public void onScriptsAdded(final Wallet wallet, final List<Script> scripts)
 	{
 		// swallow
 	}
+
+    @Override
+    public void onScriptsChanged(org.bitcoinj.core.Wallet wallet, java.util.List<org.bitcoinj.script.Script> list, boolean b)
+    {
+        //swallow
+    }
+
 }

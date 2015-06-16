@@ -88,6 +88,7 @@ import de.schildbach.wallet.data.PaymentIntent;
 import de.schildbach.wallet.ui.InputParser.BinaryInputParser;
 import de.schildbach.wallet.ui.InputParser.StringInputParser;
 import de.schildbach.wallet.ui.preference.PreferenceActivity;
+import de.schildbach.wallet.ui.send.PaymentRequestActivity;
 import de.schildbach.wallet.ui.send.SendCoinsActivity;
 import de.schildbach.wallet.ui.send.SweepWalletActivity;
 import de.schildbach.wallet.util.CrashReporter;
@@ -317,6 +318,10 @@ public final class WalletActivity extends AbstractWalletActivity
 				HelpDialogFragment.page(getFragmentManager(), R.string.help_safety);
 				return true;
 
+            case R.id.wallet_options_open_payment_request:
+                handlePaymentRequest();
+                return true;
+
 			case R.id.wallet_options_donate:
 				handleDonate();
 				return true;
@@ -333,6 +338,11 @@ public final class WalletActivity extends AbstractWalletActivity
 	{
 		startActivity(new Intent(this, RequestCoinsActivity.class));
 	}
+
+    public void handlePaymentRequest()
+    {
+        startActivity(new Intent(this, PaymentRequestActivity.class));
+    }
 
 	public void handleSendCoins()
 	{

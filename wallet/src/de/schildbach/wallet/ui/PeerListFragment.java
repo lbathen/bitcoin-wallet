@@ -296,6 +296,8 @@ public final class PeerListFragment extends FancyListFragment
 				for (final Peer peer : peers)
 					adapter.add(peer);
 
+
+
 			setEmptyText(WholeStringBuilder.bold(getString(R.string.peer_list_fragment_empty)));
 		}
 

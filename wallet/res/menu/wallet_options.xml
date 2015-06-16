@@ -68,6 +68,10 @@
 		android:id="@+id/wallet_options_donate"
 		android:showAsAction="never"
 		android:title="@string/wallet_options_donate"/>
+    <item
+        android:id="@+id/wallet_options_open_payment_request"
+        android:showAsAction="never"
+        android:title="@string/wallet_options_open_payment_request"/>
 	<item
 		android:id="@+id/wallet_options_help"
 		android:showAsAction="never"
